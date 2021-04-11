@@ -1,0 +1,33 @@
+$textColorPrim: rgb(200, 200, 200);
+$textColorSec: rgb(150, 150, 150);
+$backColor: rgb(15, 15, 15);
+$divider: rgb(75, 75, 75);
+* {
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  color: $textColorSec;
+}
+body {
+    background-color: $backColor;
+    font-family: 'Poppins', sans-serif;
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid $divider;
+  &__left h1 {
+      font-size: 2.5rem;
+     font-weight: lighter; 
+  }
+  &__left span {
+      font-weight: bold;
+  }
+  nav {
+    .header__avatar {
+      border-radius: 50%;
+      height: 100px;
+      width: 100px;
+    }
+  }
+}
