@@ -8,7 +8,8 @@ function Card({ id, src, align, title, loc }) {
   const { scrollYProgress } = useViewportScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [0, -350]);
   return (
-    <motion.div className="card" style={{ flexDirection: align }}>
+    <motion.div className="card" style={{ flexDirection: align }}
+    >
       <motion.section className="card__header">
         <motion.h1
           initial={{ translateX: "-200%" }}
@@ -20,7 +21,7 @@ function Card({ id, src, align, title, loc }) {
         <motion.p
           initial={{ translateX: "-100" }}
           animate={{ translateX: 0 }}
-          transition={transition}
+          transition={{delay: 3, ...transition}}
         >
           {loc}
         </motion.p>
@@ -28,7 +29,7 @@ function Card({ id, src, align, title, loc }) {
       <Link to={"/" + id}>
         <motion.div className="card__frame">
           <motion.img
-            style={{ width: window.innerWidth > 1440 ? 1000 : 500 }}
+            style={{ width: window.innerWidth > 1440 ? 1000 : 450 }}
             src={src}
             initial={{ scale: 1 }}
             transition={{ delay: 0.3, ...transition }}

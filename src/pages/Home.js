@@ -13,7 +13,7 @@ const align = {
 
 function Home() {
   return (
-    <motion.div className="home" transition={{ delay: 6, duration: 5 }}>
+    <motion.div className="home">
       <motion.div
         className="home__screen"
         initial={{
@@ -26,21 +26,15 @@ function Home() {
           left: 0,
         }}
         animate={{ height: 0 }}
-        transition={{ delay: 3, duration: 1, ease: ease }}
+        transition={{ delay: 2.3, duration: 1, ease: ease }}
         onAnimationStart={() => {
           document.querySelector("body").style.overflow = "hidden";
-          document.querySelector(".home__container").style.display = "none";
-          document.querySelector(".header").style.display = "none";
-
         }}
         onAnimationComplete={() => {
           document.querySelector("body").style.overflow = "initial";
-          document.querySelector(".home__container").style.display = "";
-          document.querySelector(".header").style.display = "flex";
-
         }}
       >
-        <Typed strings={["Here we go . . . "]} typeSpeed={110}></Typed>
+        <Typed strings={["Here we go . . . "]} typeSpeed={80} className="home__typed"></Typed>
       </motion.div>
       <motion.div className="home__container">
         {data.map((item, idx) => (
@@ -50,7 +44,7 @@ function Home() {
             src={process.env.PUBLIC_URL + item.path}
             title={item.title}
             loc={item.loc}
-            align={align[idx % 2]}
+            align={ window.innerWidth > 1440 && align[idx%2]}
           />
         ))}
       </motion.div>

@@ -2,7 +2,7 @@ $textColorPrim: rgb(200, 200, 200);
 $textColorSec: rgb(150, 150, 150);
 $backColor: rgb(15, 15, 15);
 $divider: rgb(75, 75, 75);
-$white: rgb(256,256,256);
+$white: rgb(256, 256, 256);
 * {
   margin: 0;
   box-sizing: border-box;
@@ -15,7 +15,6 @@ body {
 }
 body::-webkit-scrollbar {
   width: 10px;
-  border-radius: 10px;
 }
 body::-webkit-scrollbar-track {
   background: $backColor;
@@ -53,22 +52,24 @@ body::-webkit-scrollbar-thumb {
   flex-wrap: wrap;
   flex-direction: column;
   &__screen {
-    background-color: $backColor;
-    color: $textColorPrim;
+    background-color: white;
+    color: black;
     display: flex;
     color: $white;
     align-items: center;
     justify-content: center;
-
+  }
+  &__typed {
+    color: black;
   }
 }
 
-@media (max-width:720px) {
+@media (max-width: 450px) {
   .home {
-    width: 100%;
-    overflow: hidden;
+    margin: 0;
   }
 }
+
 .card {
   display: flex;
   margin-bottom: 3rem;
@@ -89,6 +90,7 @@ body::-webkit-scrollbar-thumb {
     color: $white;
     overflow: hidden;
     padding: 0.6rem 1rem;
+    width: fit-content;
     height: fit-content;
     h1 {
       font-size: 2rem;
@@ -106,10 +108,16 @@ body::-webkit-scrollbar-thumb {
 @media (max-width: 720px) {
   .card {
     width: 100%;
-    flex-direction: row-reverse;
+    margin-right: 0.3rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-size: 1rem;
+    }
     &__frame {
-      height: 200px;
-      width: 680px;
+      height: 320px;
+      width: 391px;
     }
   }
 }
@@ -126,7 +134,6 @@ body::-webkit-scrollbar-thumb {
     padding: 1rem;
   }
   &__screen {
-
     font-size: 6rem;
     overflow: hidden;
     display: flex;
@@ -138,4 +145,5 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     overflow: hidden;
   }
+
 }

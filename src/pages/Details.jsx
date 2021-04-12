@@ -10,7 +10,6 @@ function Details(props) {
   const place = data.filter((item) => item.id == path)[0];
   return (
     <motion.div className="details">
-      
       <header className="details__header">{place.title}</header>
       <div className="details__frame">
         <img src={process.env.PUBLIC_URL + place.path}></img>
