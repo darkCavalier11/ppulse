@@ -1,0 +1,56 @@
+[
+  {
+    "title": "A Journey to the land of love",
+    "loc": "Agra, India",
+    "path": "images/a.jpg",
+    "id":"a"
+  },
+  {
+    "title": "A Sunset at the golden beach",
+    "loc": "Goa, india",
+    "path": "images/b.jpg",
+    "id":"b"
+  },
+  {
+    "title": "A Day in the royal land",
+    "loc": "Rajasthan, India",
+    "path": "images/c.jpg",
+    "id":"c"
+  },
+  {
+    "title": "A Night in the Golden Palace",
+    "loc": "Punjab, India",
+    "path": "images/d.jpg",
+    "id":"d"
+  },
+  {
+    "title": "A heavenly night sky",
+    "loc": "Kashmir, India",
+    "path": "images/e.jpg",
+    "id":"e"
+  },
+  {
+    "title": "An Holy Evening at bank of ganga",
+    "loc": "Utttar Pradesh, India",
+    "path": "images/f.jpg",
+    "id":"f"
+  },
+  {
+    "title": "A Day in the mystical forest",
+    "loc": "Odisha, India",
+    "path": "images/g.jpg",
+    "id":"g"
+  },
+  {
+    "title": "A dayout in the island country",
+    "loc": "Andaman Nicober, India",
+    "path": "images/h.jpg",
+    "id":"h"
+  },
+  {
+    "title": "A day in the beast's kingdom",
+    "loc": "Westbengal, India",
+    "path": "images/i.jpg",
+    "id":"i"
+  }
+]

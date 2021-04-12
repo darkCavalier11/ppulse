@@ -1,5 +1,5 @@
 import React from 'react'
-import { Avatar } from 'react-lorem-ipsum';
+import { Avatar, fullname } from 'react-lorem-ipsum';
 import { motion } from 'framer-motion';
 function Header() {
     return (
@@ -7,6 +7,7 @@ function Header() {
             <motion.header className="header">
                 <section className="header__left">
                     <h1>The Majestic places of India</h1>
+                    <p> By {fullname()}</p>
                     <span>{new Date().toDateString()}</span>
                 </section>
                 <nav>

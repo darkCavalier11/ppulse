@@ -1,9 +1,9 @@
-import { useStateValue } from "./StateProvider";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
+import Home from "./pages/Home";
+import Details from "./pages/Details";
 
 function App() {
-  const [{ msg }, dispatch] = useStateValue();
   return (
     <div className="app">
       <Router>
@@ -11,11 +11,8 @@ function App() {
         <Route
           render={({ location }) => (
             <Switch location={location} key={location.pathname}>
-              <Route
-                exact
-                path="/"
-              ></Route>
-
+              <Route exact path="/:id" component={Details}></Route>
+              <Route exact path="/" component={Home}></Route>
             </Switch>
           )}
         ></Route>

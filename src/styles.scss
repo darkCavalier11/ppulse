@@ -2,26 +2,42 @@ $textColorPrim: rgb(200, 200, 200);
 $textColorSec: rgb(150, 150, 150);
 $backColor: rgb(15, 15, 15);
 $divider: rgb(75, 75, 75);
+$white: rgb(256,256,256);
 * {
   margin: 0;
-  padding: 10px;
   box-sizing: border-box;
-  color: $textColorSec;
+  padding: 0;
 }
 body {
-    background-color: $backColor;
-    font-family: 'Poppins', sans-serif;
+  background-color: $backColor;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: $backColor;
+}
+body::-webkit-scrollbar-thumb {
+  background: $textColorSec;
 }
 .header {
   display: flex;
+  padding: 2rem;
+  margin: 2rem 6rem;
   justify-content: space-around;
   border-bottom: 1px solid $divider;
+  color: $textColorSec;
   &__left h1 {
-      font-size: 2.5rem;
-     font-weight: lighter; 
+    padding-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: lighter;
+    color: $textColorPrim;
   }
   &__left span {
-      font-weight: bold;
+    font-weight: bold;
   }
   nav {
     .header__avatar {
@@ -29,5 +45,97 @@ body {
       height: 100px;
       width: 100px;
     }
+  }
+}
+.home {
+  margin: 4rem 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  &__screen {
+    background-color: $backColor;
+    color: $textColorPrim;
+    display: flex;
+    color: $white;
+    align-items: center;
+    justify-content: center;
+
+  }
+}
+
+@media (max-width:720px) {
+  .home {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+.card {
+  display: flex;
+  margin-bottom: 3rem;
+  margin-right: 3rem;
+  justify-content: space-around;
+  overflow: hidden;
+  &__frame {
+    height: 600px;
+    overflow: hidden;
+    img {
+      overflow: hidden;
+    }
+  }
+  &__header {
+    margin-left: 1rem;
+    text-transform: uppercase;
+    border-left: 2px solid $divider;
+    color: $white;
+    overflow: hidden;
+    padding: 0.6rem 1rem;
+    height: fit-content;
+    h1 {
+      font-size: 2rem;
+      font-weight: lighter;
+    }
+    p {
+      font-weight: bolder;
+    }
+  }
+  &__details {
+    color: $white;
+  }
+}
+
+@media (max-width: 720px) {
+  .card {
+    width: 100%;
+    flex-direction: row-reverse;
+    &__frame {
+      height: 200px;
+      width: 680px;
+    }
+  }
+}
+
+.details {
+  padding: 4rem 6rem;
+  display: flex;
+  flex-direction: column;
+  color: $textColorPrim;
+  align-items: center;
+  header {
+    text-transform: uppercase;
+    font-size: 4rem;
+    padding: 1rem;
+  }
+  &__screen {
+
+    font-size: 6rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__frame {
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
   }
 }
