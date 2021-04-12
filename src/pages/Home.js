@@ -26,7 +26,7 @@ function Home() {
           left: 0,
         }}
         animate={{ height: 0 }}
-        transition={{ delay: 2.3, duration: 1, ease: ease }}
+        transition={{ delay: 2.8, duration: 1, ease: ease }}
         onAnimationStart={() => {
           document.querySelector("body").style.overflow = "hidden";
         }}
@@ -34,7 +34,7 @@ function Home() {
           document.querySelector("body").style.overflow = "initial";
         }}
       >
-        <Typed strings={["Here we go . . . "]} typeSpeed={80} className="home__typed"></Typed>
+        <Typed strings={["Here we go . . . "]} typeSpeed={50} className="home__typed"></Typed>
       </motion.div>
       <motion.div className="home__container">
         {data.map((item, idx) => (
