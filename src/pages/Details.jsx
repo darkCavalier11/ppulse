@@ -11,8 +11,8 @@ const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 function Details(props) {
   const { scrollYProgress } = useViewportScroll();
   const scale = useTransform(scrollYProgress, [0, 0.3], [1, 1.2]);
-  const scaleMap = useTransform(scrollYProgress, [0.5, 1], [1, 1.3]);
-  
+  const scaleMap = useTransform(scrollYProgress, [0.5, 1], [1, 1.1]);
+
   const posY = useTransform(scrollYProgress, [0, 0.3], [200, -200]);
   const opacityText = useTransform(scrollYProgress, [0, 0.3, 1], [0, 1, 0]);
   const opacityMap = useTransform(scrollYProgress, [0.5, 1], [0, 1]);
@@ -124,8 +124,11 @@ function Details(props) {
       </motion.div>
       <motion.div
         className="details__container"
-        style={{ opacity: opacityMap, transition: transition, scale:scaleMap }}
+        style={{ opacity: opacityMap, transition: transition, scale: scaleMap }}
       >
+        <a href="#header" className="scroll__link">
+          &uarr;
+        </a>
         <a href={gMapUrl} target="blank" className="details__gmap">
           Visit Map &rarr;
         </a>
