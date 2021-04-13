@@ -10,9 +10,9 @@ const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
 function Details(props) {
   const { scrollYProgress } = useViewportScroll();
-  const scale = useTransform(scrollYProgress, [0, 0.8], [1, 1.2]);
-  const posY = useTransform(scrollYProgress, [0, 0.8], [100, 0]);
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [0, 1]);
+  const scale = useTransform(scrollYProgress, [0, 0.3], [1, 1.2]);
+  const posY = useTransform(scrollYProgress, [0, 0.3], [200, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.3, 1], [0, 1, 0]);
   const path = props.match.params.id;
   const place = data.filter((item) => item.id == path)[0];
   const firstHeader = place.title.substr(0, place.title.length / 2).split("");
