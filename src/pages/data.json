@@ -3,54 +3,72 @@
     "title": "A Journey to the land of love",
     "loc": "Agra, India",
     "path": "images/a.jpg",
-    "id":"a"
+    "id": "a",
+    "lat": 27.1751,
+    "long": 78.0421
   },
   {
     "title": "A Sunset at the golden beach",
     "loc": "Goa, india",
     "path": "images/b.jpg",
-    "id":"b"
+    "id": "b",
+    "lat": 15.2993,
+    "long": 74.124
   },
   {
     "title": "A Day in the royal land",
     "loc": "Rajasthan, India",
     "path": "images/c.jpg",
-    "id":"c"
+    "id": "c",
+    "lat": 26.9239,
+    "long": 75.8267
   },
   {
     "title": "A Night in the Golden Palace",
     "loc": "Punjab, India",
     "path": "images/d.jpg",
-    "id":"d"
+    "id": "d",
+    "lat": 31.62,
+    "long": 74.8765
   },
   {
     "title": "A heavenly night sky",
     "loc": "Kashmir, India",
     "path": "images/e.jpg",
-    "id":"e"
+    "id": "e",
+    "lat": 34.2268,
+    "long": 77.5619
   },
   {
     "title": "An Holy Evening at bank of ganga",
     "loc": "Utttar Pradesh, India",
     "path": "images/f.jpg",
-    "id":"f"
+    "id": "f",
+    "lat": 25.3176,
+    "long": 82.9739
   },
   {
     "title": "A Day in the mystical forest",
     "loc": "Odisha, India",
     "path": "images/g.jpg",
-    "id":"g"
+    "id": "g",
+    "lat": 21.9405,
+    "long": 86.578
   },
   {
     "title": "A dayout in the island country",
     "loc": "Andaman Nicober, India",
     "path": "images/h.jpg",
-    "id":"h"
+    "id": "h",
+    "lat": 11.7401,
+    "long": 92.6586
   },
   {
     "title": "A day in the beast's kingdom",
     "loc": "Westbengal, India",
     "path": "images/i.jpg",
-    "id":"i"
+    "id": "i",
+    "lat": 21.8359,
+    "long": 88.8842
   }
 ]

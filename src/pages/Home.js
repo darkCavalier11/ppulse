@@ -13,7 +13,7 @@ const align = {
 
 function Home() {
   return (
-    <motion.div className="home" initial={false}>
+    <motion.div className="home" exit='exit'>
       <motion.div
         className="home__screen"
         initial={{
@@ -26,7 +26,7 @@ function Home() {
           left: 0,
         }}
         animate={{ height: 0 }}
-        transition={{ delay: 2.8, duration: 1, ease: ease }}
+        transition={{ delay: 0, duration: 1, ease: ease }}
         onAnimationStart={() => {
           document.querySelector("body").style.overflow = "hidden";
         }}

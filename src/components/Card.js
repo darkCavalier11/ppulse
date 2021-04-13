@@ -13,27 +13,34 @@ function Card({ id, src, align, title, loc }) {
         <motion.h1
           initial={{ translateX: "-200%" }}
           animate={{ translateX: 0 }}
-          transition={{ delay: 3, ...transition }}
+          transition={{ delay: 0, ...transition }}
+          exit={{translateX: "-200", opacity: 0}}
         >
           {title}
         </motion.h1>
         <motion.p
           initial={{ translateX: "-100" }}
           animate={{ translateX: 0 }}
-          transition={{ delay: 3, ...transition }}
+          transition={{ delay: 0, ...transition }}
+          exit={{translateX: "-200", opacity: 0}}
         >
           {loc}
         </motion.p>
       </motion.section>
       <Link to={"/" + id}>
-        <motion.div className="card__frame" initial={{ opacity: 0 }} animate={{opacity: 1}} transition={{delay: 3}}>
+        <motion.div
+          className="card__frame"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0 }}
+        >
           <motion.img
             style={{ width: window.innerWidth > 1440 ? 1000 : 450 }}
             src={src}
             initial={{ scale: 1 }}
             transition={{ delay: 0.3, ...transition }}
             whileHover={{ scale: 1.1 }}
-            exit={{opacity: 0}}
+            exit={{ opacity: 0 }}
           ></motion.img>
         </motion.div>
       </Link>
