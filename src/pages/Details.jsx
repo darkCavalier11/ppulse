@@ -47,9 +47,9 @@ function Details(props) {
         document.body.style.overflowX = "hidden";
         document.body.scrollTop = 0;
       }}
-      initial={{x: "500%"}}
-      animate={{x: 0, transition: transition}}
-      exit='exit'
+      initial={{ x: "500%" }}
+      animate={{ x: 0, transition: transition }}
+      exit="exit"
     >
       <motion.header className="details__header">
         <motion.span className="details__headerF">
@@ -79,7 +79,11 @@ function Details(props) {
               initial={{ y: 100 }}
               animate={{
                 y: 0,
-                transition: { duration: 1, ...transition, delay: 1.4 + idx * 0.1 },
+                transition: {
+                  duration: 1,
+                  ...transition,
+                  delay: 1.4 + idx * 0.1,
+                },
               }}
             >
               {item} &nbsp;
@@ -99,7 +103,19 @@ function Details(props) {
         style={{ y: posY, opacity: opacity }}
       >
         <h1>A gentle Introduction</h1>
-        <LoremIpsum p={5} />
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget
+        laoreet lorem. Praesent leo ex, auctor id viverra vel, congue quis
+        massa. Aenean purus dolor, consectetur ac magna id, laoreet semper nunc.
+        Suspendisse potenti. Sed iaculis hendrerit mauris in tincidunt. Nullam
+        cursus sem nisl. Pellentesque tincidunt tincidunt eros vitae efficitur.
+        Ut consectetur elit id risus dictum, nec gravida mi faucibus. Orci
+        varius natoque penatibus et magnis dis parturient montes, nascetur
+        ridiculus mus. Ut erat leo, sagittis eu auctor ut, lobortis nec mi.
+        Fusce lobortis risus non odio finibus, non tempus quam lobortis. Nunc
+        sed convallis quam, id tempor tortor. Quisque luctus metus quam, in
+        dictum sem bibendum at. Suspendisse eget mi libero. Sed iaculis, ipsum
+        in facilisis convallis, ipsum sapien sodales ante, sit amet feugiat elit
+        nibh sit amet mauris. Donec sollicitudin dolor ut facilisis feugiat.
       </motion.div>
       <div className="details__container">
         <a href={gMapUrl} target="blank" className="details__gmap">
