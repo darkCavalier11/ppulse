@@ -26,7 +26,7 @@ function Home() {
           left: 0,
         }}
         animate={{ height: 0 }}
-        transition={{ delay: 0, duration: 1, ease: ease }}
+        transition={{ delay: 3, duration: 1, ease: ease }}
         onAnimationStart={() => {
           document.querySelector("body").style.overflow = "hidden";
         }}

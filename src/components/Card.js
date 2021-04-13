@@ -9,13 +9,11 @@ function Card({ id, src, align, title, loc }) {
   const scale = useTransform(scrollYProgress, [0, 1], [0, -350]);
   return (
     <motion.div className="card" style={{ flexDirection: align }}>
-      <motion.section className="card__header"
-        exit={{opacity: 0}}
-      >
+      <motion.section className="card__header" exit={{ opacity: 0 }}>
         <motion.h1
           initial={{ translateX: "-200%" }}
           animate={{ translateX: 0 }}
-          transition={{ delay: 0, ...transition }}
+          transition={{ delay: 3, ...transition }}
           exit={{ translateX: "-200%" }}
         >
           {title}
@@ -23,7 +21,7 @@ function Card({ id, src, align, title, loc }) {
         <motion.p
           initial={{ translateX: "-100" }}
           animate={{ translateX: 0 }}
-          transition={{ delay: 0, ...transition }}
+          transition={{ delay: 3, ...transition }}
           exit={{ translateX: "500%" }}
         >
           {loc}
@@ -32,16 +30,16 @@ function Card({ id, src, align, title, loc }) {
       <Link to={id}>
         <motion.div
           className="card__frame"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0 }}
-          exit={{translateX: "1000px", transition:{duration: 1.5, delay:0.3, ...transition}}}
+          exit={{
+            translateX: "1000px",
+            transition: { duration: 1.5, delay: 0.3, ...transition },
+          }}
         >
           <motion.img
             style={{ width: window.innerWidth > 1440 ? 1000 : 450 }}
             src={src}
             initial={{ scale: 1 }}
-            transition={{ delay: 0.3, ...transition }}
+            transition={transition}
             whileHover={{ scale: 1.1 }}
             exit={{ opacity: 0 }}
           ></motion.img>
