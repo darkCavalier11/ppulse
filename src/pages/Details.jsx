@@ -5,7 +5,6 @@ import { motion, useTransform, useViewportScroll } from "framer-motion";
 
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-import { Link } from "react-router-dom";
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
@@ -40,11 +39,21 @@ function Details(props) {
   const gMapUrl = `https://www.google.com/maps/search/?api=1&query=${lat},${long}`;
 
   return (
-    <motion.div className="details">
+    <motion.div
+      className="details"
+      onLoad={() => {
+        // Link un-necessary behanvior
+        document.documentElement.scrollTop = 0;
+        document.body.style.overflowX = "hidden";
+        document.body.scrollTop = 0;
+      }}
+      initial={{x: "500%"}}
+      animate={{x: 0, transition: transition}}
+    >
       <motion.header className="details__header">
         <motion.span className="details__headerF">
           {firstHeader.map((item, idx) => (
-            <motion.p
+            <motion.span
               className="letters"
               key={idx}
               initial={{ y: 100 }}
@@ -53,29 +62,29 @@ function Details(props) {
                 transition: {
                   duration: 1,
                   ...transition,
-                  delay: (firstHeader.length - idx) * 0.1,
+                  delay: 1.4 + (firstHeader.length - idx) * 0.1,
                 },
               }}
             >
               {item} &nbsp;
-            </motion.p>
+            </motion.span>
           ))}
         </motion.span>
-        <motion.p className="details__headerS">
+        <motion.span className="details__headerS">
           {lastHeader.map((item, idx) => (
-            <motion.p
+            <motion.span
               className="letters"
               key={idx}
               initial={{ y: 100 }}
               animate={{
                 y: 0,
-                transition: { duration: 1, ...transition, delay: idx * 0.1 },
+                transition: { duration: 1, ...transition, delay: 1.4 + idx * 0.1 },
               }}
             >
               {item} &nbsp;
-            </motion.p>
+            </motion.span>
           ))}
-        </motion.p>
+        </motion.span>
       </motion.header>
       <div className="details__frame">
         <motion.img

@@ -13,7 +13,7 @@ const align = {
 
 function Home() {
   return (
-    <motion.div className="home" exit='exit'>
+    <motion.div className="home" exit="exit">
       <motion.div
         className="home__screen"
         initial={{
@@ -34,7 +34,11 @@ function Home() {
           document.querySelector("body").style.overflow = "initial";
         }}
       >
-        <Typed strings={["Here we go . . . "]} typeSpeed={50} className="home__typed"></Typed>
+        <Typed
+          strings={["Here we go . . . "]}
+          typeSpeed={50}
+          className="home__typed"
+        ></Typed>
       </motion.div>
       <motion.div className="home__container">
         {data.map((item, idx) => (
@@ -44,7 +48,7 @@ function Home() {
             src={process.env.PUBLIC_URL + item.path}
             title={item.title}
             loc={item.loc}
-            align={ window.innerWidth > 1440 && align[idx%2]}
+            align={window.innerWidth > 1440 && align[idx % 2]}
           />
         ))}
       </motion.div>
