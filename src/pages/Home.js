@@ -45,6 +45,7 @@ function Home() {
           <Card
             key={idx}
             id={item.id}
+            n={idx}
             src={process.env.PUBLIC_URL + item.path}
             title={item.title}
             loc={item.loc}

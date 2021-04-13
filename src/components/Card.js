@@ -4,9 +4,9 @@ import { motion, useTransform, useViewportScroll } from "framer-motion";
 
 const transition = { duration: 0.8, ease: [0.43, 0.24, -0.01, 0.92] };
 
-function Card({ id, src, align, title, loc }) {
+function Card({ id, src, align, title, loc, n }) {
   const { scrollYProgress } = useViewportScroll();
-  const scale = useTransform(scrollYProgress, [0, 1], [0, -350]);
+  const opacity = useTransform(scrollYProgress, [n/12, n / 7, (n + 1) / 8], [0, 1, 0]);
   return (
     <motion.div className="card" style={{ flexDirection: align }}>
       <motion.section className="card__header" exit={{ opacity: 0 }}>
@@ -30,6 +30,7 @@ function Card({ id, src, align, title, loc }) {
       <Link to={id}>
         <motion.div
           className="card__frame"
+          style={{ opacity: opacity }}
           exit={{
             translateX: "1000px",
             transition: { duration: 1.5, delay: 0.3, ...transition },
