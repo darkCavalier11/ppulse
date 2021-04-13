@@ -11,10 +11,11 @@ function Card({ id, src, align, title, loc, n }) {
     [n / 12, n / 7, (n + 1) / 7],
     [0, 1, 0]
   );
+  const posY = useTransform(scrollYProgress, [n/7, (n+1)/7], [0, -1200]);
   return (
     <motion.div
       className="card"
-      style={{ flexDirection: align, opacity: opacity }}
+      style={{ flexDirection: align, opacity: opacity, y: posY }}
     >
       <motion.section className="card__header" exit={{ opacity: 0 }}>
         <motion.h1
