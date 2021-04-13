@@ -11,8 +11,13 @@ const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 function Details(props) {
   const { scrollYProgress } = useViewportScroll();
   const scale = useTransform(scrollYProgress, [0, 0.3], [1, 1.2]);
-  const posY = useTransform(scrollYProgress, [0, 0.3], [200, 0]);
-  const opacity = useTransform(scrollYProgress, [0, 0.3, 1], [0, 1, 0]);
+  const scaleMap = useTransform(scrollYProgress, [0.5, 1], [1, 1.3]);
+  
+  const posY = useTransform(scrollYProgress, [0, 0.3], [200, -200]);
+  const opacityText = useTransform(scrollYProgress, [0, 0.3, 1], [0, 1, 0]);
+  const opacityMap = useTransform(scrollYProgress, [0.5, 1], [0, 1]);
+  const opacityImg = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+
   const path = props.match.params.id;
   const place = data.filter((item) => item.id == path)[0];
   const firstHeader = place.title.substr(0, place.title.length / 2).split("");
@@ -91,16 +96,16 @@ function Details(props) {
           ))}
         </motion.span>
       </motion.header>
-      <div className="details__frame">
+      <motion.div className="details__frame" style={{ opacity: opacityImg }}>
         <motion.img
           src={process.env.PUBLIC_URL + place.path}
           initial={{ y: -500 }}
           style={{ scale: scale }}
         ></motion.img>
-      </div>
+      </motion.div>
       <motion.div
         className="details__text"
-        style={{ y: posY, opacity: opacity }}
+        style={{ y: posY, opacity: opacityText }}
       >
         <h1>A gentle Introduction</h1>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget
@@ -117,12 +122,15 @@ function Details(props) {
         in facilisis convallis, ipsum sapien sodales ante, sit amet feugiat elit
         nibh sit amet mauris. Donec sollicitudin dolor ut facilisis feugiat.
       </motion.div>
-      <div className="details__container">
+      <motion.div
+        className="details__container"
+        style={{ opacity: opacityMap, transition: transition, scale:scaleMap }}
+      >
         <a href={gMapUrl} target="blank" className="details__gmap">
           Visit Map &rarr;
         </a>
         <div ref={mapContainer} className="details__map"></div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }
