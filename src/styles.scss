@@ -216,5 +216,10 @@ body::-webkit-scrollbar-thumb {
       font-size: 1.2rem;
       padding: 0.3rem;
     }
+    &__frame {
+      img {
+        width: 700px;
+      }
+    }
   }
 }
