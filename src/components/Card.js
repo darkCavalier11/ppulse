@@ -9,12 +9,14 @@ function Card({ id, src, align, title, loc }) {
   const scale = useTransform(scrollYProgress, [0, 1], [0, -350]);
   return (
     <motion.div className="card" style={{ flexDirection: align }}>
-      <motion.section className="card__header">
+      <motion.section className="card__header"
+        exit={{opacity: 0}}
+      >
         <motion.h1
           initial={{ translateX: "-200%" }}
           animate={{ translateX: 0 }}
           transition={{ delay: 0, ...transition }}
-          exit={{ translateX: "-200", opacity: 0 }}
+          exit={{ translateX: "-200%" }}
         >
           {title}
         </motion.h1>
@@ -22,7 +24,7 @@ function Card({ id, src, align, title, loc }) {
           initial={{ translateX: "-100" }}
           animate={{ translateX: 0 }}
           transition={{ delay: 0, ...transition }}
-          exit={{ translateX: "-200", opacity: 0 }}
+          exit={{ translateX: "500%" }}
         >
           {loc}
         </motion.p>
@@ -33,6 +35,7 @@ function Card({ id, src, align, title, loc }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0 }}
+          exit={{translateX: "1000px", transition:{duration: 1.5, delay:0.3, ...transition}}}
         >
           <motion.img
             style={{ width: window.innerWidth > 1440 ? 1000 : 450 }}

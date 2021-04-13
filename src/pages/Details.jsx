@@ -49,6 +49,7 @@ function Details(props) {
       }}
       initial={{x: "500%"}}
       animate={{x: 0, transition: transition}}
+      exit='exit'
     >
       <motion.header className="details__header">
         <motion.span className="details__headerF">
