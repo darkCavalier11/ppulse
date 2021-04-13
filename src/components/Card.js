@@ -27,7 +27,7 @@ function Card({ id, src, align, title, loc }) {
           {loc}
         </motion.p>
       </motion.section>
-      <Link to={"/" + id}>
+      <a href={"/" + id}>
         <motion.div
           className="card__frame"
           initial={{ opacity: 0 }}
@@ -43,7 +43,7 @@ function Card({ id, src, align, title, loc }) {
             exit={{ opacity: 0 }}
           ></motion.img>
         </motion.div>
-      </Link>
+      </a>
     </motion.div>
   );
 }
