@@ -33,6 +33,7 @@ function Card({ id, src, align, title, loc }) {
             initial={{ scale: 1 }}
             transition={{ delay: 0.3, ...transition }}
             whileHover={{ scale: 1.1 }}
+            exit={{opacity: 0}}
           ></motion.img>
         </motion.div>
       </Link>

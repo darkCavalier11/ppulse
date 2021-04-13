@@ -13,7 +13,7 @@ const align = {
 
 function Home() {
   return (
-    <motion.div className="home">
+    <motion.div className="home" initial={false}>
       <motion.div
         className="home__screen"
         initial={{

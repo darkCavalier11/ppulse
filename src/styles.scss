@@ -144,6 +144,10 @@ body::-webkit-scrollbar-thumb {
     height: 400px;
     width: 100%;
     overflow: hidden;
+    img {
+      width: 1920px;
+      transform: translateY(-30%);
+    }
   }
 
 }
