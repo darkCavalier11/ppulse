@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import data from "./data.json";
-import { LoremIpsum } from "react-lorem-ipsum";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 
 import mapboxgl from "mapbox-gl";
@@ -11,7 +10,7 @@ const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 function Details(props) {
   const { scrollYProgress } = useViewportScroll();
   const scale = useTransform(scrollYProgress, [0, 0.3], [1, 1.2]);
-  const scaleMap = useTransform(scrollYProgress, [0.5, 1], [1, 1.1]);
+  const scaleMap = useTransform(scrollYProgress, [0.5, 1], [1, 1.3]);
 
   const posY = useTransform(scrollYProgress, [0, 0.3], [200, -200]);
   const opacityText = useTransform(scrollYProgress, [0, 0.3, 1], [0, 1, 0]);
@@ -19,14 +18,14 @@ function Details(props) {
   const opacityImg = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
 
   const path = props.match.params.id;
-  const place = data.filter((item) => item.id == path)[0];
+  const place = data.filter((item) => item.id === path)[0];
   const firstHeader = place.title.substr(0, place.title.length / 2).split("");
   const lastHeader = place.title.substr(place.title.length / 2).split("");
 
   // Mapbox configuration
 
-  const [long, setLong] = useState(place.long);
-  const [lat, setLat] = useState(place.lat);
+  const long = place.long;
+  const lat = place.lat;
   const mapContainer = useRef();
 
   useEffect(() => {
