@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/darkCavalier11/ppulse/static/css/main.77e3bb82.chunk.css",
+    "main.js": "/darkCavalier11/ppulse/static/js/main.a509c95a.chunk.js",
+    "main.js.map": "/darkCavalier11/ppulse/static/js/main.a509c95a.chunk.js.map",
+    "runtime-main.js": "/darkCavalier11/ppulse/static/js/runtime-main.897bf966.js",
+    "runtime-main.js.map": "/darkCavalier11/ppulse/static/js/runtime-main.897bf966.js.map",
+    "static/css/2.19072978.chunk.css": "/darkCavalier11/ppulse/static/css/2.19072978.chunk.css",
+    "static/js/2.bf048e41.chunk.js": "/darkCavalier11/ppulse/static/js/2.bf048e41.chunk.js",
+    "static/js/2.bf048e41.chunk.js.map": "/darkCavalier11/ppulse/static/js/2.bf048e41.chunk.js.map",
+    "index.html": "/darkCavalier11/ppulse/index.html",
+    "static/css/2.19072978.chunk.css.map": "/darkCavalier11/ppulse/static/css/2.19072978.chunk.css.map",
+    "static/css/main.77e3bb82.chunk.css.map": "/darkCavalier11/ppulse/static/css/main.77e3bb82.chunk.css.map",
+    "static/js/2.bf048e41.chunk.js.LICENSE.txt": "/darkCavalier11/ppulse/static/js/2.bf048e41.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.897bf966.js",
+    "static/css/2.19072978.chunk.css",
+    "static/js/2.bf048e41.chunk.js",
+    "static/css/main.77e3bb82.chunk.css",
+    "static/js/main.a509c95a.chunk.js"
+  ]
+}
