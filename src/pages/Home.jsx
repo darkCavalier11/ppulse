@@ -46,7 +46,7 @@ function Home() {
             key={idx}
             id={item.id}
             n={idx}
-            src={process.env.PUBLIC_URL + item.path}
+            src={item.path}
             title={item.title}
             loc={item.loc}
             align={window.innerWidth > 1440 && align[idx % 2]}
