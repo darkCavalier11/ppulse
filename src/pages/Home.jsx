@@ -16,6 +16,7 @@ function Home() {
     <motion.div className="home" exit="exit">
       <motion.div
         className="home__screen"
+        exit="exit"
         initial={{
           overflow: "hidden",
           position: "absolute",

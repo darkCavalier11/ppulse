@@ -159,8 +159,11 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     overflow: hidden;
     margin-bottom: 3rem;
+    filter: blur(3px);
     img {
-      width: 1920px;
+      position: absolute;
+      width: 100%;
+      top: -300px;
     }
   }
   &__text {
@@ -236,6 +239,9 @@ body::-webkit-scrollbar-thumb {
       img {
         width: 800px;
       }
+    }
+    &__map {
+      height: 72vh;
     }
   }
   .scroll__link {

@@ -59,6 +59,7 @@ function Details(props) {
         <motion.span className="details__headerF">
           {firstHeader.map((item, idx) => (
             <motion.span
+              exit="exit"
               className="letters"
               key={idx}
               initial={{ y: 100 }}
@@ -78,6 +79,7 @@ function Details(props) {
         <motion.span className="details__headerS">
           {lastHeader.map((item, idx) => (
             <motion.span
+              exit="exit"
               className="letters"
               key={idx}
               initial={{ y: 100 }}
@@ -97,8 +99,7 @@ function Details(props) {
       </motion.header>
       <motion.div className="details__frame" style={{ opacity: opacityImg }}>
         <motion.img
-          src={process.env.PUBLIC_URL + place.path}
-          initial={{ y: -500 }}
+          src={place.path}
           style={{ scale: scale }}
         ></motion.img>
       </motion.div>

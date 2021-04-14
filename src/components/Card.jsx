@@ -40,7 +40,7 @@ function Card({ id, src, align, title, loc, n }) {
           className="card__frame"
           exit={{
             translateX: "1000px",
-            transition: { duration: 1.5, delay: 0.3, ...transition },
+            transition: { duration: 0.5, delay: 0.3, ...transition },
           }}
         >
           <motion.img
