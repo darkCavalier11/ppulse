@@ -159,7 +159,7 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     overflow: hidden;
     margin-bottom: 3rem;
-    filter: blur(3px);
+    filter: blur(0);
     img {
       position: absolute;
       width: 100%;

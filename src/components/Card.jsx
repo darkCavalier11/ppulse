@@ -17,12 +17,12 @@ function Card({ id, src, align, title, loc, n }) {
       className="card"
       style={{ flexDirection: align, opacity: opacity, y: posY }}
     >
-      <motion.section className="card__header" exit={{ opacity: 0 }}>
+      <motion.section className="card__header" exit={{opacity: 0 }}>
         <motion.h1
           initial={{ translateX: "-200%" }}
           animate={{ translateX: 0 }}
           transition={{ delay: 3, ...transition }}
-          exit={{ translateX: "-200%" }}
+          exit={{ translateX: "-200%", transition: {delay: 0.3} }}
         >
           {title}
         </motion.h1>
@@ -30,7 +30,7 @@ function Card({ id, src, align, title, loc, n }) {
           initial={{ translateX: "-100" }}
           animate={{ translateX: 0 }}
           transition={{ delay: 3, ...transition }}
-          exit={{ translateX: "500%" }}
+          exit={{ translateX: "500%", transition: {delay: 0.3} }}
         >
           {loc}
         </motion.p>

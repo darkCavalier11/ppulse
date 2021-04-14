@@ -3,6 +3,7 @@ import Card from "../components/Card.jsx";
 import data from "./data.json";
 import { motion } from "framer-motion";
 import Typed from "react-typed";
+import { Link } from "react-router-dom";
 
 const ease = [0.23, 0.42, -0.01, 0.93];
 
